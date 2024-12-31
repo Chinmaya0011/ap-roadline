@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A.P ROADLINE</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;600&family=Lobster&family=Poppins:wght@300;500&family=Raleway:wght@300;600&family=Playfair+Display:wght@400;600&family=Oswald:wght@300;500&family=Source+Sans+Pro:wght@300;600&family=Pacifico&display=swap');
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -16,8 +18,9 @@
             color: #FF0000; /* Red color matching logo */
             text-align: center;
             font-size: 3rem;
-            text-shadow: 2px 2px 4px #333; /* Shadow for depth */
+            text-shadow: 3px 3px 5px #333; /* Shadow for depth */
             margin-top: 20px;
+            font-family: 'Lobster', cursive;
         }
         .container {
             display: flex;
@@ -42,50 +45,152 @@
             box-sizing: border-box;
         }
         /* Box Styles */
-        .box-1 { background-color: #FF0000; color: #FFF; box-shadow: 4px 4px 8px rgba(255, 0, 0, 0.5); }
-        .box-1:hover { background-color: #C70000; box-shadow: 8px 8px 16px rgba(255, 0, 0, 0.8); transform: translateY(-10px); }
+        .box-1 {
+            background-color: #FFEDED;
+            color: #FF0000;
+            box-shadow: 4px 4px 8px rgba(255, 0, 0, 0.5);
+            font-family: 'Roboto', sans-serif;
+        }
+        .box-1:hover {
+            background-color: #FFD6D6;
+            transform: translateY(-10px);
+            box-shadow: 8px 8px 16px #FF5A5A;
+        }
 
-        .box-2 { background-color: #333; color: #FFF; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); }
-        .box-2:hover { background-color: #555; box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.8); transform: rotate(5deg); }
+        .box-2 {
+            background-color: #333;
+            color: #FFF;
+            box-shadow: 4px 4px 8px rgba(255, 90, 90, 0.5);
+            font-family: 'Montserrat', sans-serif;
+        }
+        .box-2:hover {
+            transform: scale(1.1);
+            background-color: #444;
+            box-shadow: 8px 8px 16px #FF0000;
+        }
 
-        .box-3 { background-color: #FFF; border: 2px solid #FF0000; color: #FF0000; box-shadow: 4px 4px 8px rgba(255, 0, 0, 0.3); }
-        .box-3:hover { background-color: #FFEEEE; color: #C70000; box-shadow: 10px 10px 20px rgba(255, 0, 0, 0.6); transform: scale(1.1); }
+        .box-3 {
+            background: linear-gradient(135deg, #FFF, #FFEDED);
+            color: #333;
+            box-shadow: 4px 4px 8px rgba(255, 0, 0, 0.2);
+            font-family: 'Poppins', sans-serif;
+        }
+        .box-3:hover {
+            background: linear-gradient(135deg, #FFCCCC, #FFF);
+            transform: scale(1.1);
+        }
 
-        .box-4 { background: linear-gradient(45deg, #FF0000, #333); color: #FFF; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); }
-        .box-4:hover { background: linear-gradient(45deg, #C70000, #555); box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.9); transform: skew(-5deg, -5deg); }
+        .box-4 {
+            background: radial-gradient(circle, #333, #000);
+            color: #FFF;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+            font-family: 'Raleway', sans-serif;
+        }
+        .box-4:hover {
+            transform: skew(-5deg);
+            box-shadow: 12px 12px 24px #FF0000;
+        }
 
-        .box-5 { background-color: #FF5A5A; color: #FFF; box-shadow: 4px 4px 8px rgba(255, 90, 90, 0.5); }
-        .box-5:hover { background-color: #FF8080; box-shadow: 8px 8px 16px rgba(255, 90, 90, 0.8); transform: translateX(10px) translateY(10px); }
+        .box-5 {
+            background-color: #FF5A5A;
+            color: #FFF;
+            box-shadow: 4px 4px 8px rgba(255, 0, 0, 0.4);
+            font-family: 'Playfair Display', serif;
+        }
+        .box-5:hover {
+            background-color: #FF8080;
+            transform: translateY(-10px);
+            box-shadow: 8px 8px 16px rgba(255, 0, 0, 0.8);
+        }
 
-        .box-6 { background: linear-gradient(135deg, #FF0000, #FF8080); color: #FFF; box-shadow: 4px 4px 8px rgba(255, 0, 0, 0.5); }
-        .box-6:hover { transform: scale(1.2); }
+        .box-6 {
+            background-color: #EDEDED;
+            color: #FF0000;
+            border: 2px solid #333;
+            font-family: 'Oswald', sans-serif;
+        }
+        .box-6:hover {
+            background-color: #FFF;
+            color: #333;
+            transform: rotate(5deg);
+        }
 
-        .box-7 { background-color: #FF8080; color: #FFF; border: 2px solid #333; }
-        .box-7:hover { background-color: #FF0000; transform: translateY(-10px) rotate(5deg); }
+        .box-7 {
+            background-color: #000;
+            color: #FF5A5A;
+            border: 3px dashed #FFF;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        .box-7:hover {
+            background-color: #222;
+            transform: scale(1.2);
+        }
 
-        .box-8 { background-color: #FFF; color: #000; border: 2px dashed #FF0000; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
-        .box-8:hover { background-color: #FFCCCC; color: #C70000; transform: scale(1.1); }
+        .box-8 {
+            background: linear-gradient(45deg, #FF8080, #FF0000);
+            color: #FFF;
+            font-family: 'Pacifico', cursive;
+        }
+        .box-8:hover {
+            background: linear-gradient(45deg, #FF0000, #FFF);
+            transform: skew(5deg);
+        }
 
-        .box-9 { background-color: #333; color: #FF0000; border: 3px solid #FFF; }
-        .box-9:hover { border-color: #FF8080; transform: translateX(-5px); }
+        .box-9 {
+            background-color: #111;
+            color: #FFF;
+            box-shadow: 4px 4px 8px rgba(255, 0, 0, 0.5);
+            font-family: 'Roboto', sans-serif;
+        }
+        .box-9:hover {
+            background-color: #222;
+            transform: scale(1.2);
+        }
 
-        .box-10 { background: radial-gradient(circle, #FF5A5A, #333); color: #FFF; box-shadow: 4px 4px 10px rgba(255, 0, 0, 0.5); }
-        .box-10:hover { box-shadow: 8px 8px 16px rgba(255, 0, 0, 0.8); transform: scale(1.2); }
+        .box-10 {
+            background-color: #FFF5F5;
+            color: #C70000;
+            border: 2px dotted #FF0000;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .box-10:hover {
+            border-color: #FF8080;
+            transform: translateY(-5px);
+        }
 
-        .box-11 { background-color: #FF0000; color: #FFF; border: 4px double #333; }
-        .box-11:hover { transform: rotate(-5deg); }
+        .box-11 {
+            background: radial-gradient(circle, #444, #111);
+            color: #FFF;
+            box-shadow: 4px 4px 8px rgba(255, 90, 90, 0.3);
+            font-family: 'Lobster', cursive;
+        }
+        .box-11:hover {
+            box-shadow: 8px 8px 16px rgba(255, 0, 0, 0.7);
+            transform: rotate(-5deg);
+        }
 
-        .box-12 { background-color: #FFF; color: #333; border: 2px solid #FF0000; }
-        .box-12:hover { background-color: #FF0000; color: #FFF; }
+        .box-12 {
+            background-color: #FFEDED;
+            color: #000;
+            border: 2px solid #FF0000;
+            font-family: 'Poppins', sans-serif;
+        }
+        .box-12:hover {
+            background-color: #FFF;
+            border-color: #333;
+            transform: scale(1.2);
+        }
 
-        .box-13 { background: repeating-linear-gradient(45deg, #FF0000, #FF0000 10px, #FFF 10px, #FFF 20px); }
-        .box-13:hover { transform: rotate(15deg); }
+        /* Additional 8 boxes */
+        .box-13 { background-color: #EDEDED; color: #555; font-family: 'Raleway', sans-serif; }
+        .box-14 { background: linear-gradient(90deg, #FF0000, #FFF, #FF5A5A); color: #333; font-family: 'Playfair Display', serif; }
+        .box-15 { background-color: #222; color: #FFF; font-family: 'Oswald', sans-serif; }
+        .box-16 { background: radial-gradient(circle, #FFCCCC, #FF0000); color: #FFF; font-family: 'Pacifico', cursive; }
+        .box-17 { background-color: #000; color: #FF5A5A; font-family: 'Roboto', sans-serif; }
+        .box-18 { background: linear-gradient(135deg, #FF8080, #FFF); color: #333; font-family: 'Montserrat', sans-serif; }
+        .box-19 { background-color: #F7F7F7; color: #FF0000; font-family: 'Raleway', sans-serif; }
+        .box-20 { background: radial-gradient(circle, #333, #000); color: #FFF; font-family: 'Poppins', sans-serif; }
 
-        .box-14 { background: linear-gradient(90deg, #FF0000, #FFF, #333); color: #FFF; }
-        .box-14:hover { transform: skew(5deg); }
-
-        .box-15 { background-color: #FFCCCC; color: #000; border: 3px dotted #FF0000; }
-        .box-15:hover { border-color: #333; transform: scale(1.05); }
     </style>
 </head>
 <body>
@@ -103,7 +208,14 @@
         <div class="box box-10">A.P ROADLINE</div>
         <div class="box box-11">A.P ROADLINE</div>
         <div class="box box-12">A.P ROADLINE</div>
-
+        <div class="box box-13">A.P ROADLINE</div>
+        <div class="box box-14">A.P ROADLINE</div>
+        <div class="box box-15">A.P ROADLINE</div>
+        <div class="box box-16">A.P ROADLINE</div>
+        <div class="box box-17">A.P ROADLINE</div>
+        <div class="box box-18">A.P ROADLINE</div>
+        <div class="box box-19">A.P ROADLINE</div>
+        <div class="box box-20">A.P ROADLINE</div>
     </div>
 </body>
 </html>
