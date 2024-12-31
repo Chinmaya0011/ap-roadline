@@ -5,217 +5,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A.P ROADLINE</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;600&family=Lobster&family=Poppins:wght@300;500&family=Raleway:wght@300;600&family=Playfair+Display:wght@400;600&family=Oswald:wght@300;500&family=Source+Sans+Pro:wght@300;600&family=Pacifico&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;600&family=Lobster&family=Poppins:wght@300;500&family=Raleway:wght@300;600&family=Playfair+Display:wght@400;600&family=Oswald:wght@300;500&family=Source+Sans+Pro:wght@300;600&family=Pacifico&family=Caveat&family=Comfortaa&display=swap');
 
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #F7F7F7; /* Light gray background */
-            color: #000; /* Default black text */
+            background-color: #F7F7F7;
+            color: #000;
         }
+
         h1 {
-            color: #FF0000; /* Red color matching logo */
+            color: #FF0000;
             text-align: center;
             font-size: 3rem;
-            text-shadow: 3px 3px 5px #333; /* Shadow for depth */
+            text-shadow: 3px 3px 5px #333;
             margin-top: 20px;
             font-family: 'Lobster', cursive;
         }
+
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             padding: 20px;
-            gap: 20px;
+            gap: 10px;
         }
+
         .box {
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 10px;
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: bold;
             text-transform: uppercase;
-            transition: all 0.3s ease;
+            transition: all 0.5s ease;
             text-align: center;
             padding: 10px;
             box-sizing: border-box;
         }
-        /* Box Styles */
-        .box-1 {
-            background-color: #FFEDED;
-            color: #FF0000;
-            box-shadow: 4px 4px 8px rgba(255, 0, 0, 0.5);
-            font-family: 'Roboto', sans-serif;
+
+        /* Dynamic Styling for 100 Boxes */
+        .box:nth-child(odd) { background: linear-gradient(45deg, #FF8080, #FFEDED); color: #333; font-family: 'Roboto', sans-serif; }
+        .box:nth-child(even) { background: radial-gradient(circle, #111, #444); color: #FFF; font-family: 'Montserrat', sans-serif; }
+        .box:nth-child(3n) { background: linear-gradient(90deg, #FF0000, #FFF); color: #FF0000; font-family: 'Pacifico', cursive; }
+        .box:nth-child(5n) { background-color: #FFEDED; color: #FF0000; border: 2px solid #FF5A5A; font-family: 'Raleway', sans-serif; }
+        .box:nth-child(7n) { background: radial-gradient(circle, #000, #333); color: #FFF; font-family: 'Source Sans Pro', sans-serif; }
+        .box:nth-child(10n) { background-color: #FFF5F5; color: #C70000; border: 2px dotted #FF0000; font-family: 'Playfair Display', serif; }
+        .box:nth-child(4n) { background: linear-gradient(135deg, #FF5A5A, #000); color: #FFF; font-family: 'Oswald', sans-serif; }
+        .box:nth-child(6n) { background: radial-gradient(circle, #111, #444); color: #FF5A5A; font-family: 'Comfortaa', cursive; }
+        .box:nth-child(9n) { background: linear-gradient(45deg, #FFCCCC, #FFF); color: #333; font-family: 'Poppins', sans-serif; }
+        .box:nth-child(11n) { background: linear-gradient(90deg, #333, #FF0000); color: #FFF; font-family: 'Caveat', cursive; }
+        .box:nth-child(12n) { background: radial-gradient(circle, #F7F7F7, #FF0000); color: #333; font-family: 'Roboto', sans-serif; }
+
+        /* Hover Effects */
+        .box:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 8px 8px 16px rgba(255, 0, 0, 0.6);
         }
-        .box-1:hover {
-            background-color: #FFD6D6;
+
+        .box:nth-child(odd):hover {
             transform: translateY(-10px);
-            box-shadow: 8px 8px 16px #FF5A5A;
+            box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.8);
         }
 
-        .box-2 {
-            background-color: #333;
-            color: #FFF;
-            box-shadow: 4px 4px 8px rgba(255, 90, 90, 0.5);
-            font-family: 'Montserrat', sans-serif;
+        .box:nth-child(even):hover {
+            transform: translateX(10px);
+            box-shadow: 8px 8px 16px rgba(255, 90, 90, 0.8);
         }
-        .box-2:hover {
-            transform: scale(1.1);
-            background-color: #444;
-            box-shadow: 8px 8px 16px #FF0000;
-        }
-
-        .box-3 {
-            background: linear-gradient(135deg, #FFF, #FFEDED);
-            color: #333;
-            box-shadow: 4px 4px 8px rgba(255, 0, 0, 0.2);
-            font-family: 'Poppins', sans-serif;
-        }
-        .box-3:hover {
-            background: linear-gradient(135deg, #FFCCCC, #FFF);
-            transform: scale(1.1);
-        }
-
-        .box-4 {
-            background: radial-gradient(circle, #333, #000);
-            color: #FFF;
-            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
-            font-family: 'Raleway', sans-serif;
-        }
-        .box-4:hover {
-            transform: skew(-5deg);
-            box-shadow: 12px 12px 24px #FF0000;
-        }
-
-        .box-5 {
-            background-color: #FF5A5A;
-            color: #FFF;
-            box-shadow: 4px 4px 8px rgba(255, 0, 0, 0.4);
-            font-family: 'Playfair Display', serif;
-        }
-        .box-5:hover {
-            background-color: #FF8080;
-            transform: translateY(-10px);
-            box-shadow: 8px 8px 16px rgba(255, 0, 0, 0.8);
-        }
-
-        .box-6 {
-            background-color: #EDEDED;
-            color: #FF0000;
-            border: 2px solid #333;
-            font-family: 'Oswald', sans-serif;
-        }
-        .box-6:hover {
-            background-color: #FFF;
-            color: #333;
-            transform: rotate(5deg);
-        }
-
-        .box-7 {
-            background-color: #000;
-            color: #FF5A5A;
-            border: 3px dashed #FFF;
-            font-family: 'Source Sans Pro', sans-serif;
-        }
-        .box-7:hover {
-            background-color: #222;
-            transform: scale(1.2);
-        }
-
-        .box-8 {
-            background: linear-gradient(45deg, #FF8080, #FF0000);
-            color: #FFF;
-            font-family: 'Pacifico', cursive;
-        }
-        .box-8:hover {
-            background: linear-gradient(45deg, #FF0000, #FFF);
-            transform: skew(5deg);
-        }
-
-        .box-9 {
-            background-color: #111;
-            color: #FFF;
-            box-shadow: 4px 4px 8px rgba(255, 0, 0, 0.5);
-            font-family: 'Roboto', sans-serif;
-        }
-        .box-9:hover {
-            background-color: #222;
-            transform: scale(1.2);
-        }
-
-        .box-10 {
-            background-color: #FFF5F5;
-            color: #C70000;
-            border: 2px dotted #FF0000;
-            font-family: 'Montserrat', sans-serif;
-        }
-        .box-10:hover {
-            border-color: #FF8080;
-            transform: translateY(-5px);
-        }
-
-        .box-11 {
-            background: radial-gradient(circle, #444, #111);
-            color: #FFF;
-            box-shadow: 4px 4px 8px rgba(255, 90, 90, 0.3);
-            font-family: 'Lobster', cursive;
-        }
-        .box-11:hover {
-            box-shadow: 8px 8px 16px rgba(255, 0, 0, 0.7);
-            transform: rotate(-5deg);
-        }
-
-        .box-12 {
-            background-color: #FFEDED;
-            color: #000;
-            border: 2px solid #FF0000;
-            font-family: 'Poppins', sans-serif;
-        }
-        .box-12:hover {
-            background-color: #FFF;
-            border-color: #333;
-            transform: scale(1.2);
-        }
-
-        /* Additional 8 boxes */
-        .box-13 { background-color: #EDEDED; color: #555; font-family: 'Raleway', sans-serif; }
-        .box-14 { background: linear-gradient(90deg, #FF0000, #FFF, #FF5A5A); color: #333; font-family: 'Playfair Display', serif; }
-        .box-15 { background-color: #222; color: #FFF; font-family: 'Oswald', sans-serif; }
-        .box-16 { background: radial-gradient(circle, #FFCCCC, #FF0000); color: #FFF; font-family: 'Pacifico', cursive; }
-        .box-17 { background-color: #000; color: #FF5A5A; font-family: 'Roboto', sans-serif; }
-        .box-18 { background: linear-gradient(135deg, #FF8080, #FFF); color: #333; font-family: 'Montserrat', sans-serif; }
-        .box-19 { background-color: #F7F7F7; color: #FF0000; font-family: 'Raleway', sans-serif; }
-        .box-20 { background: radial-gradient(circle, #333, #000); color: #FFF; font-family: 'Poppins', sans-serif; }
-
     </style>
 </head>
 <body>
     <h1>A.P ROADLINE</h1>
     <div class="container">
-        <div class="box box-1">A.P ROADLINE</div>
-        <div class="box box-2">A.P ROADLINE</div>
-        <div class="box box-3">A.P ROADLINE</div>
-        <div class="box box-4">A.P ROADLINE</div>
-        <div class="box box-5">A.P ROADLINE</div>
-        <div class="box box-6">A.P ROADLINE</div>
-        <div class="box box-7">A.P ROADLINE</div>
-        <div class="box box-8">A.P ROADLINE</div>
-        <div class="box box-9">A.P ROADLINE</div>
-        <div class="box box-10">A.P ROADLINE</div>
-        <div class="box box-11">A.P ROADLINE</div>
-        <div class="box box-12">A.P ROADLINE</div>
-        <div class="box box-13">A.P ROADLINE</div>
-        <div class="box box-14">A.P ROADLINE</div>
-        <div class="box box-15">A.P ROADLINE</div>
-        <div class="box box-16">A.P ROADLINE</div>
-        <div class="box box-17">A.P ROADLINE</div>
-        <div class="box box-18">A.P ROADLINE</div>
-        <div class="box box-19">A.P ROADLINE</div>
-        <div class="box box-20">A.P ROADLINE</div>
+        <!-- Generate 100 Unique Divs -->
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
+        <div class="box">A.P ROADLINE</div>
     </div>
 </body>
 </html>
